@@ -34,11 +34,11 @@ public class StringCalculadora {
         }
     }
 
-//    private String sacarCaracteresEspeciales(String string) {
-//        Pattern patron = Pattern.compile(" |#|%|&|:|[*]|\n|;|/");
-//        Matcher encaja = patron.matcher(string);
-//        return encaja.replaceAll(",");
-//    }
+    private String sacarCaracteresEspeciales(String string) {
+        Pattern patron = Pattern.compile(" |#|%|&|:|[*]|\n|;|/");
+        Matcher encaja = patron.matcher(string);
+        return encaja.replaceAll(",");
+    }
 
     private int sumarString(String frac) {
         int valor_acumulado = 0;
@@ -54,7 +54,7 @@ public class StringCalculadora {
                         throw new NumerosNegativosExcepcion(frac, "no se puede ingresar negativos");
                     } else {
                         if (valor1 > 1000) {
-                            valor1 = 0;
+                           valor1 = 0;
                             valor_acumulado = valor_acumulado + valor1;
                             primer_index = index + 1;
                         } else {
@@ -64,7 +64,7 @@ public class StringCalculadora {
                     }
                 }
             } catch (StringIndexOutOfBoundsException f) {
-                segund_index = index;
+              //  segund_index = index; // linea conetada para probocar error
                 int valor1 = Integer.parseInt(frac.substring(primer_index, segund_index));
                 if (valor1 < 0) {
                     throw new NumerosNegativosExcepcion(frac, "no se puede ingresar negativos");
