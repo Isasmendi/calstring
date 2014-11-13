@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package test;
 
 import clases.NumerosNegativosExcepcion;
@@ -7,11 +12,11 @@ import org.junit.Test;
 
 /**
  *
- * @author hk
+ * @author hk007
  */
-public class teststringcalculator {
-
-    @Test
+public class StringCalculatorTest {
+    
+     @Test
     public void cadena_vacia_test() {
         StringCalculadora calcula = new StringCalculadora();
         int result = calcula.add("");
@@ -111,5 +116,5 @@ public class teststringcalculator {
         int result = calculadora.add("2,2000,3,2");
         assertEquals(result, 7);
     }
-
+    
 }
