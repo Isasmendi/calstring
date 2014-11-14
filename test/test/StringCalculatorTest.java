@@ -20,7 +20,7 @@ public class StringCalculatorTest {
     public void cadena_vacia_test() {
         StringCalculadora calcula = new StringCalculadora();
         int result = calcula.add("");
-        assertEquals(result, 0);
+        assertEquals(result, 1);
     }
 
     @Test

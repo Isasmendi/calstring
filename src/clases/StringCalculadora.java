@@ -64,7 +64,7 @@ public class StringCalculadora {
                     }
                 }
             } catch (StringIndexOutOfBoundsException f) {
-              //  segund_index = index; // linea conetada para probocar error
+                segund_index = index; // linea conetada para probocar error
                 int valor1 = Integer.parseInt(frac.substring(primer_index, segund_index));
                 if (valor1 < 0) {
                     throw new NumerosNegativosExcepcion(frac, "no se puede ingresar negativos");
